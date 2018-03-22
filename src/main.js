@@ -15,22 +15,28 @@ $(document).ready(() => {
   let moviePick = new MoviePick();
 
   $('#yearBest').click(e => {
-    $('.showList').empty()
     e.preventDefault();
+    $('.showList').empty()
+    $('#rayLewisText').empty()
     let userInput = $('#year').val()
     $('#showInfo').text(`Here are some of the most popular movies for ` + userInput + `.`)
     MoviePick.prototype.getBest(userInput, displayData)
   });
 
-  $(document).ready(() => {
-    let moviePick = new MoviePick();
+  $('#yearWorst').click(e => {
+    e.preventDefault();
+    $('.showList').empty()
+    $('#rayLewisText').empty()
+    let userInput = $('#year').val()
+    $('#showInfo').text(`Here are some of the least popular movies for ` + userInput + `.`)
+    MoviePick.prototype.getWorst(userInput, displayData)
+  });
 
-    $('#yearWorst').click(e => {
-      $('.showList').empty()
-      e.preventDefault();
-      let userInput = $('#year').val()
-      $('#showInfo').text(`Here are some of the least popular movies for ` + userInput + `.`)
-      MoviePick.prototype.getWorst(userInput, displayData)
-    })
-  })
+  $('#rayLewis').click(e => {
+    e.preventDefault();
+    let killer = "Ray Lewis"
+    $('.showList').empty()
+    $('#showInfo').empty()
+    $('#rayLewisText').text(killer)
+  });
 });

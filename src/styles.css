@@ -1,3 +1,39 @@
-html {
-  font-size: 1vw;
+body {
+  font-size: 2vw;
+  background-color: #4E116B;
+  color: #BDB428;
+  text-align: center;
+}
+
+#rayLewisText,#title{
+  font-size: 8vw;
+  color: #BDB428;
+  text-shadow: -1vw 1vw 2vw #4E116B;
+  list-style: none;
+}
+
+#title {
+  font-size: 8vw;
+  color: #4E096B;
+  text-shadow: 0 0 12vw #BDB428 ;
+  list-style: none;
+}
+
+.btn {
+  font-size: 2vw;
+  background-image: url('https://usatftw.files.wordpress.com/2013/11/raylewis.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4E116B;
+  color: #BDB428;
+}
+
+input {
+  background-color: #4E116B;
+  color: #BDB428;
+}
+
+ul, li, ol {
+  list-style: none;
 }

@@ -6,18 +6,20 @@
   <body>
     <div class='container'>
       <br>
-      <h1>Movie Picker</h1>
+      <h1 id="title">Movie Picker</h1>
       <hr>
       <form id="movie-year-form">
         <label for="year">Enter a year:</label>
         <input type="number" min="1900" max="2018" name="year" value="1998" id="year" class="form-control-lg">
         <br><br>
-        <button type="submit" id="yearBest" class="btn btn-info">BEST MOVIES</button>
-        <button type="submit" id="yearWorst" class="btn btn-info">WORST MOVIES</button>
+        <button type="submit" id="yearBest" class="btn">BEST MOVIES</button>
+        <button type="submit" id="yearWorst" class="btn">WORST MOVIES</button>
+        <button type="submit" id="rayLewis" class="btn">BUY VHS</button>
       </form>
       <br>
       <div id="showInfo">
       </div>
+      <h2><span id="rayLewisText"></span></h2>
       <ol class="showList">
       </ol>
     </div>
