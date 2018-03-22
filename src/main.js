@@ -12,13 +12,25 @@ const displayData = response => {
 };
 
 $(document).ready(() => {
-  const moviePick = new MoviePick();
+  let moviePick = new MoviePick();
 
-  $('#yearClick').click(event => {
+  $('#yearBest').click(e => {
     $('.showList').empty()
-    event.preventDefault();
+    e.preventDefault();
     let userInput = $('#year').val()
     $('#showInfo').text(`Here are some of the most popular movies for ` + userInput + `.`)
-    MoviePick.prototype.getData(userInput, displayData)
+    MoviePick.prototype.getBest(userInput, displayData)
   });
+
+  $(document).ready(() => {
+    let moviePick = new MoviePick();
+
+    $('#yearWorst').click(e => {
+      $('.showList').empty()
+      e.preventDefault();
+      let userInput = $('#year').val()
+      $('#showInfo').text(`Here are some of the least popular movies for ` + userInput + `.`)
+      MoviePick.prototype.getWorst(userInput, displayData)
+    })
+  })
 });
