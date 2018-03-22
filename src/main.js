@@ -5,19 +5,21 @@ import '../.env';
 
 var MoviePick = require('./moviepick.js').moviePick;
 
-var displayData = function(results) {
-  for(let i = 0; i < results.length; i++){
-    $('.showList').append('<li>' + results[i].title + '</li>');
-  }
+var displayData = function(response) {
+  response.results.forEach(function(result) {
+    $('.showList').append('<li>' + result.title + '</li>');
+  });
 }
 
 $(document).ready(function() {
   var moviePick = new MoviePick();
 
-  $('#movie-year-form').submit(function (event) {
+  $('#yearClick').click(function (event) {
+    $('.showList').empty()
     event.preventDefault();
-
+    console.log(userInput);
     var userInput = $('#year').val()
-    moviePick.getData(userInput, displayData)
+    $('#showInfo').text(`Here are some of the most popular movies for ` + userInput + `.`)
+    MoviePick.prototype.getData(userInput, displayData)
   });
 });
