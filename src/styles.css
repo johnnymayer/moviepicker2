@@ -5,18 +5,19 @@ body {
   text-align: center;
 }
 
-#rayLewisText,#title{
-  font-size: 8vw;
-  color: #BDB428;
-  text-shadow: -1vw 1vw 2vw #4E116B;
-  list-style: none;
-}
-
-#title {
+#rayLewisText, #title {
   font-size: 8vw;
   color: #4E096B;
-  text-shadow: 0 0 12vw #BDB428 ;
-  list-style: none;
+  text-shadow: 0 0 12vw #BDB428;
+}
+
+#rayLewisText {
+  font-size: 6vw;
+  background-image: url('https://usatftw.files.wordpress.com/2013/11/raylewis.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 2 2 4vw #BDB428;
+  color: #4E096B;
 }
 
 .btn {
@@ -27,6 +28,10 @@ body {
   background-repeat: no-repeat;
   background-color: #4E116B;
   color: #BDB428;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2vw #BDB428;
 }
 
 input {
